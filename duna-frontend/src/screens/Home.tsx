@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+
+interface IResults {
+  id: number;
+  name: string;
+  url: string;
+}
 
 interface IPost {
-  id: number;
-  userId?: number;
-  title: string;
-  body: string;
+  results: Array<IResults>;
 }
 
 const defaultPosts: IPost[] = [];
@@ -39,10 +42,9 @@ function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        timeout: 4000,
       })
-      .then((response) => {
-        setPosts(response.data);
+      .then((response: AxiosResponse) => {
+        setPosts(response.data.results);
         setLoading(false);
       })
       .catch((ex) => {
@@ -60,16 +62,8 @@ function Home() {
   return (
     <StyledWrapper>
       <h1>Pokedex</h1>
-      {/* <ul className="posts">
-        {posts.map((post) => (
-          <li key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
-          </li>
-        ))}
-      </ul>
-      {error && <p className="error">{error}</p>} */}
-      {console.log(posts)}
+      {console.log(posts[0])}
+      {error && <p className="error">{error}</p>}
     </StyledWrapper>
   );
 }
