@@ -29,6 +29,11 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-weight: 700;
   }
+
+  h2 {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
 `;
 
 export default GlobalStyle;
