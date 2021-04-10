@@ -15,4 +15,10 @@ export interface IPokeCard {
   children: string;
 }
 
-export interface IPokemon {}
+export interface IPokemon {
+  backgroundColor: string;
+}
+
+export interface IPokeType {
+  children: any;
+}

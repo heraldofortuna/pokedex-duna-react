@@ -3,32 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import { IPokemon } from "../interfaces";
 import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
-
-const StyledPokemon = styled.div`
-  background-color: var(--blue);
-
-  .pokemon__data--principal {
-    background-color: green;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    .pokemon__name {
-      font-size: 36px;
-    }
-
-    .pokemon__id {
-      font-size: 16px;
-      font-weight: 700;
-    }
-  }
-
-  .pokemon__image {
-    width: 150px;
-    height: 150px;
-  }
-`;
+import PokeType from "../components/PokeType";
 
 export default function Pokemon() {
   const pokeName = window.location.href.split("/")[3];
@@ -73,6 +48,73 @@ export default function Pokemon() {
       });
   }, [pokeName]);
 
+  function backgroundColorPokemon(type: any) {
+    let backgroundColor = "var(--blue)";
+    switch (type) {
+      case "grass": {
+        backgroundColor = "var(--green)";
+        break;
+      }
+      case "fire": {
+        backgroundColor = "var(--red)";
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+    return backgroundColor;
+  }
+
+  const StyledPokemon = styled.div`
+    background-color: ${backgroundColorPokemon(pokemonType1)};
+    height: 200px;
+    display: grid;
+    place-items: center;
+
+    .pokemon__data--principal {
+      background-color: rgba(10, 10, 10, 0.25);
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .pokemon__name {
+          color: var(--white);
+          font-size: 36px;
+        }
+
+        .pokemon__types {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+
+      .pokemon__id {
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+
+    .pokemon__image {
+      width: 150px;
+      height: 150px;
+    }
+
+    .pokemon__data--stats {
+      background-color: var(--white);
+    }
+  `;
+
   return (
     <Wrapper>
       <StyledPokemon>
@@ -80,13 +122,16 @@ export default function Pokemon() {
           <div>
             <h2 className="pokemon__name">{pokeName}</h2>
             <div className="pokemon__types">
-              <p>{pokemonType1}</p>
-              <p>{pokemonType2}</p>
+              <PokeType>{pokemonType1}</PokeType>
+              <PokeType>{pokemonType2}</PokeType>
             </div>
           </div>
           <p className="pokemon__id">{pokemonId}</p>
         </div>
         <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
+        <div className="pokemon__data--stats">
+          <p>Pokemon stats!</p>
+        </div>
       </StyledPokemon>
     </Wrapper>
   );

@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     --gray: #B3B6BA;
     --light-gray: #D9DFE9;
     --blue: #98A2E6;
+    --green: #48D0B0;
+    --red: #FB6C6C;
     --pink: #F5A5C2;
   }
 
@@ -33,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-weight: 700;
     text-transform: capitalize;
+  }
+
+  h3 {
+    font-size: 16px;
   }
 `;
 
