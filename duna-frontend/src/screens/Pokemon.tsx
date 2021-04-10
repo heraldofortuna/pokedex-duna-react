@@ -18,6 +18,12 @@ export default function Pokemon() {
   const [pokemonAbility1, setPokemonAbility1] = React.useState();
   const [pokemonAbility2, setPokemonAbility2] = React.useState();
   const [pokemonBaseExperience, setPokemonBaseExperience] = React.useState();
+  const [pokemonHP, setPokemonHP] = React.useState();
+  const [pokemonAttack, setPokemonAttack] = React.useState();
+  const [pokemonDefense, setPokemonDefense] = React.useState();
+  const [pokemonSpecialAttack, setPokemonSpecialAttack] = React.useState();
+  const [pokemonSpecialDefense, setPokemonSpecialDefense] = React.useState();
+  const [pokemonSpeed, setPokemonSpeed] = React.useState();
 
   const [, setLoading]: [
     boolean,
@@ -44,6 +50,12 @@ export default function Pokemon() {
         setPokemonAbility1(response.data.abilities[0].ability.name);
         setPokemonAbility2(response.data.abilities[1].ability.name);
         setPokemonBaseExperience(response.data.base_experience);
+        setPokemonHP(response.data.stats[0].base_stat);
+        setPokemonAttack(response.data.stats[1].base_stat);
+        setPokemonDefense(response.data.stats[2].base_stat);
+        setPokemonSpecialAttack(response.data.stats[3].base_stat);
+        setPokemonSpecialDefense(response.data.stats[4].base_stat);
+        setPokemonSpeed(response.data.stats[5].base_stat);
         console.log(response.data);
         setLoading(false);
       })
@@ -203,7 +215,55 @@ export default function Pokemon() {
                   <h4>Base experience</h4>
                 </td>
                 <td>
-                  <p>{pokemonBaseExperience} pts</p>
+                  <p>{pokemonBaseExperience}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>HP:</h4>
+                </td>
+                <td>
+                  <p>{pokemonHP}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Attack</h4>
+                </td>
+                <td>
+                  <p>{pokemonAttack}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Defense</h4>
+                </td>
+                <td>
+                  <p>{pokemonDefense}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Sp. Attack</h4>
+                </td>
+                <td>
+                  <p>{pokemonSpecialAttack}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Sp. Defense</h4>
+                </td>
+                <td>
+                  <p>{pokemonSpecialDefense}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Speed</h4>
+                </td>
+                <td>
+                  <p>{pokemonSpeed}</p>
                 </td>
               </tr>
             </table>
