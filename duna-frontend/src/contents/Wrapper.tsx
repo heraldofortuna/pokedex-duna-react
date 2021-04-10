@@ -3,7 +3,7 @@ import { IWrapper } from "../interfaces";
 
 const StyledWrapper = styled.div`
   background-color: var(--white);
-  width: 50%;
+  width: 400px;
   min-height: 100vh;
   margin: 0 auto;
 `;

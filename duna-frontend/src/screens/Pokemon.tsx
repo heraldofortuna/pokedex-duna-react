@@ -1,5 +1,6 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
 import { IPokemon } from "../interfaces";
 import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
@@ -154,6 +155,10 @@ export default function Pokemon() {
         }
       }
     }
+
+    .pokemon__button--back {
+      text-align: center;
+    }
   `;
 
   return (
@@ -168,7 +173,7 @@ export default function Pokemon() {
               </h1>
               <div className="pokemon__types">
                 <PokeType>{pokemonType1}</PokeType>
-                <PokeType>{pokemonType2}</PokeType>
+                {pokemonType2 && <PokeType>{pokemonType2}</PokeType>}
               </div>
             </div>
             <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
@@ -191,7 +196,7 @@ export default function Pokemon() {
                   <h4>Weight</h4>
                 </td>
                 <td>
-                  <p>{pokemonWeight} kg</p>
+                  <p>{pokemonWeight}</p>
                 </td>
               </tr>
               <tr>
@@ -266,7 +271,9 @@ export default function Pokemon() {
                 </td>
               </tr>
             </table>
-            <Button>Back to menu</Button>
+            <Link to={"/"} className="pokemon__button--back">
+              <Button>Back to menu</Button>
+            </Link>
           </Container>
         </section>
       </StyledPokemon>

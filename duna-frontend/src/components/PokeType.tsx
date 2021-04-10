@@ -4,7 +4,7 @@ import { IPokeType } from "../interfaces";
 const StyledPokeType = styled.div`
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 16px;
-  padding: 4px 8px;
+  padding: 4px 12px;
 
   & > h3 {
     color: var(--white);
