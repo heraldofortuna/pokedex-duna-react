@@ -1,5 +1,6 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
 import { IPokeList } from "../interfaces";
 import styled from "styled-components";
 import PokeCard from "./PokeCard";
@@ -52,7 +53,9 @@ export default function PokeCardList() {
   return (
     <StyledPokeCardList>
       {pokemons.map((pokemon) => (
-        <PokeCard>{pokemon.name}</PokeCard>
+        <Link to={`/${pokemon.name}`}>
+          <PokeCard>{pokemon.name}</PokeCard>
+        </Link>
       ))}
       {error && <p className="error">{error}</p>}
     </StyledPokeCardList>
