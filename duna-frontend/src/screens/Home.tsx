@@ -1,23 +1,12 @@
-import styled from "styled-components";
 import PokeCardList from "../components/PokeCardList";
-
-const StyledWrapper = styled.div`
-  background-color: var(--white);
-  width: 50%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 20px;
-  margin: 0 auto;
-`;
+import Wrapper from "../contents/Wrapper";
 
 function Home() {
   return (
-    <StyledWrapper>
+    <Wrapper>
       <h1>Pokedex</h1>
       <PokeCardList />
-    </StyledWrapper>
+    </Wrapper>
   );
 }
 

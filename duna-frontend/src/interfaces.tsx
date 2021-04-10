@@ -1,3 +1,7 @@
+export interface IWrapper {
+  children: any;
+}
+
 export interface IPokeListResults {}
 
 export interface IPokeList {
