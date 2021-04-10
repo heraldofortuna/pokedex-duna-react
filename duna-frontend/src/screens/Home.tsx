@@ -1,18 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import axios, { AxiosResponse } from "axios";
+import { IPokeList } from "../interfaces";
 
-interface IResults {
-  id: number;
-  name: string;
-  url: string;
-}
-
-interface IPost {
-  results: Array<IResults>;
-}
-
-const defaultPosts: IPost[] = [];
+const defaultPokeList: IPokeList[] = [];
 
 const StyledWrapper = styled.div`
   background-color: var(--white);
@@ -23,9 +14,10 @@ const StyledWrapper = styled.div`
 `;
 
 function Home() {
-  const [posts, setPosts]: [IPost[], (posts: IPost[]) => void] = React.useState(
-    defaultPosts
-  );
+  const [posts, setPosts]: [
+    IPokeList[],
+    (posts: IPokeList[]) => void
+  ] = React.useState(defaultPokeList);
 
   const [loading, setLoading]: [
     boolean,
@@ -38,7 +30,7 @@ function Home() {
 
   React.useEffect(() => {
     axios
-      .get<IPost[]>("https://pokeapi.co/api/v2/pokemon/", {
+      .get<IPokeList[]>("https://pokeapi.co/api/v2/pokemon/", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -62,7 +54,11 @@ function Home() {
   return (
     <StyledWrapper>
       <h1>Pokedex</h1>
-      {console.log(posts[0])}
+      <ul className="posts">
+        {posts.map((post) => (
+          <li>{post.name}</li>
+        ))}
+      </ul>
       {error && <p className="error">{error}</p>}
     </StyledWrapper>
   );

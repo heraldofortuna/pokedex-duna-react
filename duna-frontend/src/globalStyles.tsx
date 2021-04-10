@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
     color: var(--black);
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
     padding: 0;
     margin: 0;
   }
