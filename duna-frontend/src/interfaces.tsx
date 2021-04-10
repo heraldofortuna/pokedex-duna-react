@@ -6,6 +6,10 @@ export interface IContainer {
   children: any;
 }
 
+export interface IButton {
+  children: string;
+}
+
 export interface IPokeListResults {}
 
 export interface IPokeList {

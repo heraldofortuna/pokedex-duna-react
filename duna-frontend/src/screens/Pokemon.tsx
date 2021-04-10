@@ -5,10 +5,10 @@ import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
 import Container from "../contents/Container";
 import PokeType from "../components/PokeType";
+import Button from "../components/Button";
 
 export default function Pokemon() {
   const pokeName = window.location.href.split("/")[3];
-
   const [pokemonId, setPokemonId] = React.useState();
   const [pokemonType1, setPokemonType1] = React.useState();
   const [pokemonType2, setPokemonType2] = React.useState();
@@ -56,7 +56,6 @@ export default function Pokemon() {
         setPokemonSpecialAttack(response.data.stats[3].base_stat);
         setPokemonSpecialDefense(response.data.stats[4].base_stat);
         setPokemonSpeed(response.data.stats[5].base_stat);
-        console.log(response.data);
         setLoading(false);
       })
       .catch((ex) => {
@@ -110,7 +109,7 @@ export default function Pokemon() {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 4px;
+          gap: 8px;
 
           .pokemon__id {
             color: var(--white);
@@ -133,7 +132,7 @@ export default function Pokemon() {
     }
 
     .pokemon__data--stats {
-      background-color: var(--red);
+      background-color: var(--white);
       width: 100%;
       height: 100%;
       border-radius: 20px 20px 0 0;
@@ -150,7 +149,7 @@ export default function Pokemon() {
           width: 50%;
 
           & > h4 {
-            color: var(--light-gray);
+            color: var(--gray);
           }
         }
       }
@@ -164,7 +163,7 @@ export default function Pokemon() {
           <div className="pokemon__data--principal">
             <div>
               <h1 className="pokemon__name">
-                <p className="pokemon__id">{pokemonId}</p>
+                <p className="pokemon__id">#{pokemonId}</p>
                 {pokeName}
               </h1>
               <div className="pokemon__types">
@@ -267,6 +266,7 @@ export default function Pokemon() {
                 </td>
               </tr>
             </table>
+            <Button>Back to menu</Button>
           </Container>
         </section>
       </StyledPokemon>
