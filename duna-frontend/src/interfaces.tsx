@@ -11,6 +11,4 @@ export interface IPokeCard {
   children: string;
 }
 
-export interface IPokemon {
-  name: string;
-}
+export interface IPokemon {}

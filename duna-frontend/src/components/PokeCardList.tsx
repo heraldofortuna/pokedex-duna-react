@@ -16,10 +16,10 @@ const defaultPokeList: IPokeList[] = [];
 export default function PokeCardList() {
   const [pokemons, setPokemons]: [
     IPokeList[],
-    (posts: IPokeList[]) => void
+    (pokemons: IPokeList[]) => void
   ] = React.useState(defaultPokeList);
 
-  const [loading, setLoading]: [
+  const [, setLoading]: [
     boolean,
     (loading: boolean) => void
   ] = React.useState<boolean>(true);
@@ -50,6 +50,7 @@ export default function PokeCardList() {
         setLoading(false);
       });
   }, []);
+
   return (
     <StyledPokeCardList>
       {pokemons.map((pokemon) => (
