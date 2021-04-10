@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import { IPokemon } from "../interfaces";
 import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
+import Container from "../contents/Container";
 import PokeType from "../components/PokeType";
 
 export default function Pokemon() {
@@ -68,7 +69,6 @@ export default function Pokemon() {
 
   const StyledPokemon = styled.div`
     background-color: ${backgroundColorPokemon(pokemonType1)};
-    height: 200px;
     display: grid;
     place-items: center;
 
@@ -88,6 +88,15 @@ export default function Pokemon() {
         .pokemon__name {
           color: var(--white);
           font-size: 36px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 4px;
+
+          .pokemon__id {
+            color: var(--white);
+            font-size: 24px;
+          }
         }
 
         .pokemon__types {
@@ -98,40 +107,42 @@ export default function Pokemon() {
         }
       }
 
-      .pokemon__id {
-        color: var(--white);
-        font-size: 16px;
-        font-weight: 700;
+      .pokemon__image {
+        width: 150px;
+        height: 150px;
       }
     }
 
-    .pokemon__image {
-      width: 150px;
-      height: 150px;
-    }
-
     .pokemon__data--stats {
-      background-color: var(--white);
+      background-color: var(--red);
+      width: 100%;
+      border-radius: 20px 20px 0 0;
     }
   `;
 
   return (
     <Wrapper>
       <StyledPokemon>
-        <div className="pokemon__data--principal">
-          <div>
-            <h2 className="pokemon__name">{pokeName}</h2>
-            <div className="pokemon__types">
-              <PokeType>{pokemonType1}</PokeType>
-              <PokeType>{pokemonType2}</PokeType>
+        <Container>
+          <div className="pokemon__data--principal">
+            <div>
+              <h2 className="pokemon__name">
+                <p className="pokemon__id">{pokemonId}</p>
+                {pokeName}
+              </h2>
+              <div className="pokemon__types">
+                <PokeType>{pokemonType1}</PokeType>
+                <PokeType>{pokemonType2}</PokeType>
+              </div>
             </div>
+            <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
           </div>
-          <p className="pokemon__id">{pokemonId}</p>
-        </div>
-        <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
-        <div className="pokemon__data--stats">
-          <p>Pokemon stats!</p>
-        </div>
+        </Container>
+        <section className="pokemon__data--stats">
+          <Container>
+            <h1>Pokemon stats</h1>
+          </Container>
+        </section>
       </StyledPokemon>
     </Wrapper>
   );

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { IContainer } from "../interfaces";
 
 const StyledContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
