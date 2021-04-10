@@ -7,6 +7,7 @@ import Wrapper from "../contents/Wrapper";
 import Container from "../contents/Container";
 import PokeType from "../components/PokeType";
 import Button from "../components/Button";
+import { backgroundColorPokemon } from "../services/Functions";
 
 export default function Pokemon() {
   const pokeName = window.location.href.split("/")[3];
@@ -70,68 +71,6 @@ export default function Pokemon() {
         setLoading(false);
       });
   }, [pokeName]);
-
-  function backgroundColorPokemon(type: any) {
-    let backgroundColor = "var(--white)";
-    switch (type) {
-      case "grass": {
-        backgroundColor = "var(--green)";
-        break;
-      }
-      case "fire": {
-        backgroundColor = "var(--light-red)";
-        break;
-      }
-      case "water": {
-        backgroundColor = "var(--blue)";
-        break;
-      }
-      case "bug": {
-        backgroundColor = "var(--light-green)";
-        break;
-      }
-      case "normal": {
-        backgroundColor = "var(--gray)";
-        break;
-      }
-      case "poison": {
-        backgroundColor = "var(--light-purple)";
-        break;
-      }
-      case "electric": {
-        backgroundColor = "var(--light-yellow)";
-        break;
-      }
-      case "ground": {
-        backgroundColor = "var(--yellow)";
-        break;
-      }
-      case "fighting": {
-        backgroundColor = "var(--red)";
-        break;
-      }
-      case "psychic": {
-        backgroundColor = "var(--pink)";
-        break;
-      }
-      case "rock": {
-        backgroundColor = "var(--brown)";
-        break;
-      }
-      case "ghost": {
-        backgroundColor = "var(--purple)";
-        break;
-      }
-      case "ice": {
-        backgroundColor = "var(--light-blue)";
-        break;
-      }
-      default: {
-        break;
-      }
-    }
-    return backgroundColor;
-  }
 
   const StyledPokemon = styled.div`
     background-color: ${backgroundColorPokemon(pokemonType1)};
@@ -227,93 +166,97 @@ export default function Pokemon() {
           <Container>
             <h2>About</h2>
             <table className="pokemon__stats">
-              <tr>
-                <td>
-                  <h4>Height</h4>
-                </td>
-                <td>
-                  <p>{pokemonHeight} cm</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Weight</h4>
-                </td>
-                <td>
-                  <p>{pokemonWeight}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Abilities</h4>
-                </td>
-                <td>
-                  <div>
-                    <p>
-                      {pokemonAbility1}, {pokemonAbility2}
-                    </p>
-                  </div>
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>Height</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonHeight} cm</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Weight</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonWeight}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Abilities</h4>
+                  </td>
+                  <td>
+                    <div>
+                      <p>
+                        {pokemonAbility1}, {pokemonAbility2}
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
             </table>
             <h2>Pokemon stats</h2>
             <table className="pokemon__stats">
-              <tr>
-                <td>
-                  <h4>Base experience</h4>
-                </td>
-                <td>
-                  <p>{pokemonBaseExperience}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>HP:</h4>
-                </td>
-                <td>
-                  <p>{pokemonHP}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Attack</h4>
-                </td>
-                <td>
-                  <p>{pokemonAttack}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Defense</h4>
-                </td>
-                <td>
-                  <p>{pokemonDefense}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Sp. Attack</h4>
-                </td>
-                <td>
-                  <p>{pokemonSpecialAttack}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Sp. Defense</h4>
-                </td>
-                <td>
-                  <p>{pokemonSpecialDefense}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Speed</h4>
-                </td>
-                <td>
-                  <p>{pokemonSpeed}</p>
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>Base experience</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonBaseExperience}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>HP:</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonHP}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Attack</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonAttack}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Defense</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonDefense}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Sp. Attack</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonSpecialAttack}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Sp. Defense</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonSpecialDefense}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Speed</h4>
+                  </td>
+                  <td>
+                    <p>{pokemonSpeed}</p>
+                  </td>
+                </tr>
+              </tbody>
             </table>
             <Link to={"/"} className="pokemon__button--back">
               <Button>Back to menu</Button>
