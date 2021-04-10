@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     --green: #48D0B0;
     --red: #FB6C6C;
     --pink: #F5A5C2;
+    --yellow: #FFD86F;
   }
 
   * {
@@ -30,11 +31,12 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-weight: 700;
+    text-transform: capitalize;
   }
 
   h2 {
+    font-size: 18px;
     font-weight: 700;
-    text-transform: capitalize;
   }
 
   h3 {

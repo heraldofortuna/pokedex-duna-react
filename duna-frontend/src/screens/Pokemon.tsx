@@ -13,6 +13,11 @@ export default function Pokemon() {
   const [pokemonType1, setPokemonType1] = React.useState();
   const [pokemonType2, setPokemonType2] = React.useState();
   const [pokemonImage, setPokemonImage] = React.useState();
+  const [pokemonHeight, setPokemonHeight] = React.useState();
+  const [pokemonWeight, setPokemonWeight] = React.useState();
+  const [pokemonAbility1, setPokemonAbility1] = React.useState();
+  const [pokemonAbility2, setPokemonAbility2] = React.useState();
+  const [pokemonBaseExperience, setPokemonBaseExperience] = React.useState();
 
   const [, setLoading]: [
     boolean,
@@ -34,6 +39,11 @@ export default function Pokemon() {
         setPokemonType1(response.data.types[0].type.name);
         response.data.types[1] !== undefined &&
           setPokemonType2(response.data.types[1].type.name);
+        setPokemonHeight(response.data.height);
+        setPokemonWeight(response.data.weight);
+        setPokemonAbility1(response.data.abilities[0].ability.name);
+        setPokemonAbility2(response.data.abilities[1].ability.name);
+        setPokemonBaseExperience(response.data.base_experience);
         console.log(response.data);
         setLoading(false);
       })
@@ -69,11 +79,8 @@ export default function Pokemon() {
 
   const StyledPokemon = styled.div`
     background-color: ${backgroundColorPokemon(pokemonType1)};
-    display: grid;
-    place-items: center;
 
     .pokemon__data--principal {
-      background-color: rgba(10, 10, 10, 0.25);
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -116,7 +123,25 @@ export default function Pokemon() {
     .pokemon__data--stats {
       background-color: var(--red);
       width: 100%;
+      height: 100%;
       border-radius: 20px 20px 0 0;
+      box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
+      -webkit-box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
+      -moz-box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
+
+      .pokemon__stats {
+        tr {
+          width: 75%;
+        }
+
+        td {
+          width: 50%;
+
+          & > h4 {
+            color: var(--light-gray);
+          }
+        }
+      }
     }
   `;
 
@@ -126,10 +151,10 @@ export default function Pokemon() {
         <Container>
           <div className="pokemon__data--principal">
             <div>
-              <h2 className="pokemon__name">
+              <h1 className="pokemon__name">
                 <p className="pokemon__id">{pokemonId}</p>
                 {pokeName}
-              </h2>
+              </h1>
               <div className="pokemon__types">
                 <PokeType>{pokemonType1}</PokeType>
                 <PokeType>{pokemonType2}</PokeType>
@@ -140,7 +165,48 @@ export default function Pokemon() {
         </Container>
         <section className="pokemon__data--stats">
           <Container>
-            <h1>Pokemon stats</h1>
+            <h2>About</h2>
+            <table className="pokemon__stats">
+              <tr>
+                <td>
+                  <h4>Height</h4>
+                </td>
+                <td>
+                  <p>{pokemonHeight} cm</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Weight</h4>
+                </td>
+                <td>
+                  <p>{pokemonWeight} kg</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Abilities</h4>
+                </td>
+                <td>
+                  <div>
+                    <p>
+                      {pokemonAbility1}, {pokemonAbility2}
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <h2>Pokemon stats</h2>
+            <table className="pokemon__stats">
+              <tr>
+                <td>
+                  <h4>Base experience</h4>
+                </td>
+                <td>
+                  <p>{pokemonBaseExperience} pts</p>
+                </td>
+              </tr>
+            </table>
           </Container>
         </section>
       </StyledPokemon>
