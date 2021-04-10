@@ -2,6 +2,10 @@ export interface IWrapper {
   children: any;
 }
 
+export interface IContainer {
+  children: any;
+}
+
 export interface IPokeListResults {}
 
 export interface IPokeList {
