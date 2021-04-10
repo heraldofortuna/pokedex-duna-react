@@ -10,3 +10,7 @@ export interface IPokeList {
 export interface IPokeCard {
   children: string;
 }
+
+export interface IPokemon {
+  name: string;
+}
