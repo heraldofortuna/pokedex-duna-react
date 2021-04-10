@@ -39,7 +39,8 @@ export default function Pokemon() {
         setPokemonId(response.data.id);
         setPokemonImage(response.data.sprites.front_default);
         setPokemonType1(response.data.types[0].type.name);
-        setPokemonType2(response.data.types[1].type.name);
+        response.data.types[1] !== undefined &&
+          setPokemonType2(response.data.types[1].type.name);
         console.log(response.data);
         setLoading(false);
       })
@@ -58,10 +59,12 @@ export default function Pokemon() {
   return (
     <StyledPokemon>
       <Wrapper>
-        <h2>{pokeName}</h2>
-        <p>{pokemonType1}</p>
-        <p>{pokemonType2}</p>
-        <p>{pokemonId}</p>
+        <div>
+          <h2>{pokeName}</h2>
+          <p>{pokemonType1}</p>
+          <p>{pokemonType2}</p>
+          <p>{pokemonId}</p>
+        </div>
         <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
       </Wrapper>
     </StyledPokemon>
