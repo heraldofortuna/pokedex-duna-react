@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IContainer } from "../interfaces";
+import { IContainer } from "../services/Interfaces";
 
 const StyledContainer = styled.div`
   width: 100%;

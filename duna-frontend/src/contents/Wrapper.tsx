@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IWrapper } from "../interfaces";
+import { IWrapper } from "../services/Interfaces";
 
 const StyledWrapper = styled.div`
   background-color: var(--white);

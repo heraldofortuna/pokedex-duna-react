@@ -1,7 +1,7 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
 import { Link } from "react-router-dom";
-import { IPokeList } from "../interfaces";
+import { IPokeList } from "../services/Interfaces";
 import styled from "styled-components";
 import PokeCard from "./PokeCard";
 

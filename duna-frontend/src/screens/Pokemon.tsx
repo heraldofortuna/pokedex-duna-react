@@ -1,7 +1,7 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
 import { Link } from "react-router-dom";
-import { IPokemon } from "../interfaces";
+import { IPokemon } from "../services/Interfaces";
 import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
 import Container from "../contents/Container";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IPokeType } from "../interfaces";
+import { IPokeType } from "../services/Interfaces";
 
 const StyledPokeType = styled.div`
   background-color: rgba(255, 255, 255, 0.25);

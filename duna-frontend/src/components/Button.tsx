@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IButton } from "../interfaces";
+import { IButton } from "../services/Interfaces";
 
 const StyledButton = styled.button`
   background-color: var(--black);
@@ -18,7 +18,6 @@ const StyledButton = styled.button`
 
   :hover {
     opacity: 0.85;
-    transform: translateY(-4px);
   }
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IPokeCard } from "../interfaces";
+import { IPokeCard } from "../services/Interfaces";
 
 const StyledPokeCard = styled.li`
   background-color: var(--white);
