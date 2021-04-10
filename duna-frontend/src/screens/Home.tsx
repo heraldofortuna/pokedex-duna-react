@@ -2,7 +2,7 @@ import React from "react";
 import axios, { AxiosResponse } from "axios";
 import { IPokeList } from "../interfaces";
 import styled from "styled-components";
-import PokeCard from "../components/PokeCard";
+import PokeCardList from "../components/PokeCardList";
 
 const defaultPokeList: IPokeList[] = [];
 
@@ -57,7 +57,8 @@ function Home() {
       <h1>Pokedex</h1>
       <ul className="posts">
         {pokemons.map((pokemon) => (
-          <PokeCard>{pokemon.name}</PokeCard>
+          <h2>PokeCardList</h2>
+          // <PokeCardList />
         ))}
       </ul>
       {error && <p className="error">{error}</p>}
