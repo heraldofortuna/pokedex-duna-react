@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import axios, { AxiosResponse } from "axios";
 import { IPokeList } from "../interfaces";
+import styled from "styled-components";
+import PokeCard from "../components/PokeCard";
 
 const defaultPokeList: IPokeList[] = [];
 
@@ -14,7 +15,7 @@ const StyledWrapper = styled.div`
 `;
 
 function Home() {
-  const [posts, setPosts]: [
+  const [pokemons, setPokemons]: [
     IPokeList[],
     (posts: IPokeList[]) => void
   ] = React.useState(defaultPokeList);
@@ -36,7 +37,7 @@ function Home() {
         },
       })
       .then((response: AxiosResponse) => {
-        setPosts(response.data.results);
+        setPokemons(response.data.results);
         setLoading(false);
       })
       .catch((ex) => {
@@ -55,8 +56,8 @@ function Home() {
     <StyledWrapper>
       <h1>Pokedex</h1>
       <ul className="posts">
-        {posts.map((post) => (
-          <li>{post.name}</li>
+        {pokemons.map((pokemon) => (
+          <PokeCard>{pokemon.name}</PokeCard>
         ))}
       </ul>
       {error && <p className="error">{error}</p>}

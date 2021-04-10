@@ -6,3 +6,7 @@ export interface IPokeList {
   name: string;
   url: string;
 }
+
+export interface IPokeCard {
+  children: string;
+}
