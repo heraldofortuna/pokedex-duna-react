@@ -10,7 +10,3 @@ export interface IPokeList {
 export interface IPokeCard {
   children: string;
 }
-
-export interface IPokeCardList {
-  children: React.ReactNode;
-}
