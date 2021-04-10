@@ -12,16 +12,22 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     color: var(--black);
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     padding: 0;
     margin: 0;
+    
   }
 
   body {
     background-color: var(--light-gray);
+  }
+
+  h1 {
+    font-weight: 700;
   }
 `;
 

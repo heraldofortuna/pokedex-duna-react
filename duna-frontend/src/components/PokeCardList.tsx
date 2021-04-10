@@ -5,7 +5,9 @@ import styled from "styled-components";
 import PokeCard from "./PokeCard";
 
 const StyledPokeCardList = styled.ul`
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 const defaultPokeList: IPokeList[] = [];

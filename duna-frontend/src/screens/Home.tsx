@@ -5,6 +5,9 @@ const StyledWrapper = styled.div`
   background-color: var(--white);
   width: 50%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   padding: 20px;
   margin: 0 auto;
 `;
