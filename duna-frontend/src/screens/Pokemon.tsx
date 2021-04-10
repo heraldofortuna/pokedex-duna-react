@@ -7,6 +7,23 @@ import Wrapper from "../contents/Wrapper";
 const StyledPokemon = styled.div`
   background-color: var(--blue);
 
+  .pokemon__data--principal {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .pokemon__name {
+      font-size: 36px;
+    }
+
+    .pokemon__id {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
   .pokemon__image {
     width: 150px;
     height: 150px;
@@ -57,16 +74,20 @@ export default function Pokemon() {
   }, [pokeName]);
 
   return (
-    <StyledPokemon>
-      <Wrapper>
-        <div>
-          <h2>{pokeName}</h2>
-          <p>{pokemonType1}</p>
-          <p>{pokemonType2}</p>
-          <p>{pokemonId}</p>
+    <Wrapper>
+      <StyledPokemon>
+        <div className="pokemon__data--principal">
+          <div>
+            <h2 className="pokemon__name">{pokeName}</h2>
+            <div className="pokemon__types">
+              <p>{pokemonType1}</p>
+              <p>{pokemonType2}</p>
+            </div>
+          </div>
+          <p className="pokemon__id">{pokemonId}</p>
         </div>
         <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
-      </Wrapper>
-    </StyledPokemon>
+      </StyledPokemon>
+    </Wrapper>
   );
 }

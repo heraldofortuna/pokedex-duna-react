@@ -7,8 +7,8 @@ const StyledWrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding: 20px;
+  // gap: 32px;
+  // padding: 20px;
   margin: 0 auto;
 `;
 
