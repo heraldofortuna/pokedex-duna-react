@@ -54,8 +54,8 @@ export default function PokeCardList() {
   return (
     <StyledPokeCardList>
       {pokemons.map((pokemon) => (
-        <Link to={`/${pokemon.name}`}>
-          <PokeCard key={pokemon.id}>{pokemon.name}</PokeCard>
+        <Link key={pokemon.name} to={`/${pokemon.name}`}>
+          <PokeCard>{pokemon.name}</PokeCard>
         </Link>
       ))}
       {error && <p className="error">{error}</p>}

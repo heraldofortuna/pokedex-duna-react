@@ -3,7 +3,7 @@ import { IContent } from "../services/Interfaces";
 import styled from "styled-components";
 import PokeballImage from "../assets/pokeball.svg";
 
-const StyledPokeCard = styled.li`
+const StyledPokeCard = styled.div`
   background-color: var(--white);
   display: flex;
   flex-direction: row;
