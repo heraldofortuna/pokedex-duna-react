@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { IPokeInfo } from "../services/Interfaces";
 
@@ -81,7 +82,6 @@ const StyledPokeInfo = styled.div<IPokeInfo>`
 export default function PokeInfo(props: IPokeInfo) {
   return (
     <StyledPokeInfo backgroundColor={props.backgroundColor}>
-      {console.log(props.backgroundColor)}
       <Container>
         <div className="pokemon__data--principal">
           <div>
@@ -99,103 +99,105 @@ export default function PokeInfo(props: IPokeInfo) {
       </Container>
       <section className="pokemon__data--stats">
         <Container>
-          <h2>About</h2>
-          <table className="pokemon__stats">
-            <tbody>
-              <tr>
-                <td>
-                  <h4>Height</h4>
-                </td>
-                <td>
-                  <p>{props.height} cm</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Weight</h4>
-                </td>
-                <td>
-                  <p>{props.weight}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Abilities</h4>
-                </td>
-                <td>
-                  <div>
-                    <p>
-                      {props.ability1}, {props.ability2}
-                    </p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h2>Pokemon stats</h2>
-          <table className="pokemon__stats">
-            <tbody>
-              <tr>
-                <td>
-                  <h4>Base experience</h4>
-                </td>
-                <td>
-                  <p>{props.base_experience}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>HP</h4>
-                </td>
-                <td>
-                  <p>{props.hp}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Attack</h4>
-                </td>
-                <td>
-                  <p>{props.attack}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Defense</h4>
-                </td>
-                <td>
-                  <p>{props.defense}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Sp. Attack</h4>
-                </td>
-                <td>
-                  <p>{props.sp_attack}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Sp. Defense</h4>
-                </td>
-                <td>
-                  <p>{props.sp_defense}</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Speed</h4>
-                </td>
-                <td>
-                  <p>{props.speed}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <Link to={"/"} className="pokemon__button--back">
-            <Button>Back to menu</Button>
-          </Link>
+          <React.Fragment>
+            <h2>About</h2>
+            <table className="pokemon__stats">
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>Height</h4>
+                  </td>
+                  <td>
+                    <p>{props.height} cm</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Weight</h4>
+                  </td>
+                  <td>
+                    <p>{props.weight}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Abilities</h4>
+                  </td>
+                  <td>
+                    <div>
+                      <p>
+                        {props.ability1}, {props.ability2}
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Pokemon stats</h2>
+            <table className="pokemon__stats">
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>Base experience</h4>
+                  </td>
+                  <td>
+                    <p>{props.base_experience}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>HP</h4>
+                  </td>
+                  <td>
+                    <p>{props.hp}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Attack</h4>
+                  </td>
+                  <td>
+                    <p>{props.attack}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Defense</h4>
+                  </td>
+                  <td>
+                    <p>{props.defense}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Sp. Attack</h4>
+                  </td>
+                  <td>
+                    <p>{props.sp_attack}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Sp. Defense</h4>
+                  </td>
+                  <td>
+                    <p>{props.sp_defense}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Speed</h4>
+                  </td>
+                  <td>
+                    <p>{props.speed}</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <Link to={"/"} className="pokemon__button--back">
+              <Button>Back to menu</Button>
+            </Link>
+          </React.Fragment>
         </Container>
       </section>
     </StyledPokeInfo>

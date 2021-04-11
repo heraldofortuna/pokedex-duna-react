@@ -1,9 +1,5 @@
 export interface IContent {
-  children: React.ReactElement;
-}
-
-export interface ITextContent {
-  children: string;
+  children: React.ReactNode;
 }
 
 export interface IPokeListResults {}
@@ -16,21 +12,21 @@ export interface IPokeList {
 }
 
 export interface IPokeInfo {
-  id?: any;
-  name?: any;
-  type1?: any;
-  type2?: any;
-  image?: any;
-  height?: any;
-  weight?: any;
-  ability1?: any;
-  ability2?: any;
-  base_experience?: any;
-  hp?: any;
-  attack?: any;
-  defense?: any;
-  sp_attack?: any;
-  sp_defense?: any;
-  speed?: any;
-  backgroundColor?: any;
+  id?: React.ReactText;
+  name?: string;
+  type1?: React.ReactText;
+  type2?: React.ReactText;
+  image?: string;
+  height?: React.ReactText;
+  weight?: React.ReactText;
+  ability1?: React.ReactText;
+  ability2?: React.ReactText;
+  base_experience?: React.ReactText;
+  hp?: React.ReactText;
+  attack?: React.ReactText;
+  defense?: React.ReactText;
+  sp_attack?: React.ReactText;
+  sp_defense?: React.ReactText;
+  speed?: React.ReactText;
+  backgroundColor?: React.ReactText;
 }

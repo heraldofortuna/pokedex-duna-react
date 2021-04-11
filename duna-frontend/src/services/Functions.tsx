@@ -1,4 +1,4 @@
-export function backgroundColorPokemon(type: any) {
+export function ChooseColorAccordingType(type: any) {
   let backgroundColor = "var(--white)";
   switch (type) {
     case "grass": {

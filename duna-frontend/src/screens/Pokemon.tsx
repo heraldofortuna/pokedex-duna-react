@@ -2,7 +2,7 @@ import React from "react";
 import axios, { AxiosResponse } from "axios";
 import Wrapper from "../contents/Wrapper";
 import PokeInfo from "../components/PokeInfo";
-import { backgroundColorPokemon } from "../services/Functions";
+import { ChooseColorAccordingType } from "../services/Functions";
 
 export default function Pokemon() {
   const pokeName = window.location.href.split("/")[3];
@@ -86,7 +86,7 @@ export default function Pokemon() {
         sp_attack={pokemonSpecialAttack}
         sp_defense={pokemonSpecialDefense}
         speed={pokemonSpeed}
-        backgroundColor={backgroundColorPokemon(pokemonType1)}
+        backgroundColor={ChooseColorAccordingType(pokemonType1)}
       />
     </Wrapper>
   );

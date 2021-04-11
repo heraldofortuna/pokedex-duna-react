@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ITextContent } from "../services/Interfaces";
+import { IContent } from "../services/Interfaces";
 
 const StyledButton = styled.button`
   background-color: var(--black);
@@ -25,6 +25,6 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function Button(prop: ITextContent) {
+export default function Button(prop: IContent) {
   return <StyledButton>{prop.children}</StyledButton>;
 }
