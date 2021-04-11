@@ -1,14 +1,17 @@
 import styled from "styled-components";
-import { IContent } from "../services/Interfaces";
+import { IPokeType } from "../services/Interfaces";
 
-const StyledPokeType = styled.div<IContent>`
+const StyledPokeType = styled.div<IPokeType>`
   background-color: rgba(255, 255, 255, 0.25);
+  border: 2px solid transparent;
   border-radius: 16px;
   padding: 4px 12px;
-  transition: 0.4s all;
+  cursor: pointer;
+  transition: 0.2s all;
 
   :hover {
-    background-color: ;
+    background-color: ${(props) => props.backgroundColor};
+    border: 2px solid var(--white);
   }
 
   & > h3 {
@@ -16,10 +19,10 @@ const StyledPokeType = styled.div<IContent>`
   }
 `;
 
-export default function PokeType(prop: IContent) {
+export default function PokeType(props: IPokeType) {
   return (
-    <StyledPokeType>
-      <h3>{prop.children}</h3>
+    <StyledPokeType backgroundColor={props.backgroundColor}>
+      <h3>{props.children}</h3>
     </StyledPokeType>
   );
 }

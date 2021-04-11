@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IPokeInfo } from "../services/Interfaces";
+import { ChooseColorAccordingType } from "../services/Functions";
 
 import styled from "styled-components";
 import Container from "../contents/Container";
@@ -90,8 +91,16 @@ export default function PokeInfo(props: IPokeInfo) {
               {props.name}
             </h1>
             <div className="pokemon__types">
-              <PokeType>{props.type1}</PokeType>
-              {props.type2 && <PokeType>{props.type2}</PokeType>}
+              <PokeType backgroundColor={ChooseColorAccordingType(props.type1)}>
+                {props.type1}
+              </PokeType>
+              {props.type2 && (
+                <PokeType
+                  backgroundColor={ChooseColorAccordingType(props.type2)}
+                >
+                  {props.type2}
+                </PokeType>
+              )}
             </div>
           </div>
           <img className="pokemon__image" src={props.image} alt={props.name} />

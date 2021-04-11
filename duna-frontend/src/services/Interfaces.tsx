@@ -2,6 +2,11 @@ export interface IContent {
   children: React.ReactNode;
 }
 
+export interface IPokeType {
+  children: React.ReactNode;
+  backgroundColor?: React.ReactText;
+}
+
 export interface IPokeListResults {}
 
 export interface IPokeList {
