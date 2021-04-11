@@ -6,8 +6,8 @@ import Container from "../contents/Container";
 import Button from "../components/Button";
 import PokeType from "../components/PokeType";
 
-const StyledPokeInfo = styled.div`
-  background-color: var(--blue);
+const StyledPokeInfo = styled.div<IPokeInfo>`
+  background-color: ${(props) => props.backgroundColor};
 
   .pokemon__data--principal {
     width: 100%;
@@ -80,7 +80,8 @@ const StyledPokeInfo = styled.div`
 
 export default function PokeInfo(props: IPokeInfo) {
   return (
-    <StyledPokeInfo>
+    <StyledPokeInfo backgroundColor={props.backgroundColor}>
+      {console.log(props.backgroundColor)}
       <Container>
         <div className="pokemon__data--principal">
           <div>
