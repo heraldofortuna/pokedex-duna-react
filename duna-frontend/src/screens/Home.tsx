@@ -7,6 +7,7 @@ function Home() {
     <Wrapper>
       <Container>
         <h1>Pokedex</h1>
+        <h4>- Created by: Heraldo Fortuna -</h4>
         <PokeCardList />
       </Container>
     </Wrapper>

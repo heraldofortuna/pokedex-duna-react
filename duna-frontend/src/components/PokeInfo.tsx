@@ -145,7 +145,7 @@ export default function PokeInfo(props: IPokeInfo) {
               </tr>
               <tr>
                 <td>
-                  <h4>HP:</h4>
+                  <h4>HP</h4>
                 </td>
                 <td>
                   <p>{props.hp}</p>

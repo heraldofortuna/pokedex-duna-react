@@ -19,6 +19,10 @@ const StyledButton = styled.button`
   :hover {
     opacity: 0.85;
   }
+
+  :focus {
+    outline: none;
+  }
 `;
 
 export default function Button(prop: IButton) {

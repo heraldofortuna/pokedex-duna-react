@@ -49,6 +49,11 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: 16px;
   }
+
+  h4 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
 `;
 
 export default GlobalStyle;
