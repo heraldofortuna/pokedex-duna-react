@@ -11,7 +11,7 @@
 - Utilizar Css, puede ser css, sass o styled component
 
 Recuerda que no tenemos un timeline, reclutamos on a rolling basis. Recuerda de actualizar el form que recibiste en tu correo cuando termines la prueba.
-Al completar la prueba tecinca avisanos por aca (usa el mismo correo): https://airtable.com/shrfLtBYqMg3jY3dc
+Al completar la prueba ténica, avísanos por acá (usa el mismo correo): https://airtable.com/shrfLtBYqMg3jY3dc
 
 ## 🎯 Puntos
 
