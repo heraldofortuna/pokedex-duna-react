@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IWrapper } from "../services/Interfaces";
+import { IContent } from "../services/Interfaces";
 
 const StyledWrapper = styled.div`
   background-color: var(--white);
@@ -8,6 +8,6 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
 `;
 
-export default function Wrapper(prop: IWrapper) {
+export default function Wrapper(prop: IContent) {
   return <StyledWrapper>{prop.children}</StyledWrapper>;
 }

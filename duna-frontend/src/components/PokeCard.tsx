@@ -1,4 +1,4 @@
-import { IPokeCard } from "../services/Interfaces";
+import { ITextContent } from "../services/Interfaces";
 
 import styled from "styled-components";
 import PokeballImage from "../assets/pokeball.svg";
@@ -29,7 +29,7 @@ const StyledPokeCard = styled.li`
   }
 `;
 
-export default function PokeCard(prop: IPokeCard) {
+export default function PokeCard(prop: ITextContent) {
   return (
     <StyledPokeCard>
       <p>{prop.children}</p>

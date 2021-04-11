@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IContainer } from "../services/Interfaces";
+import { IContent } from "../services/Interfaces";
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -9,6 +9,6 @@ const StyledContainer = styled.div`
   padding: 20px;
 `;
 
-export default function Container(prop: IContainer) {
+export default function Container(prop: IContent) {
   return <StyledContainer>{prop.children}</StyledContainer>;
 }

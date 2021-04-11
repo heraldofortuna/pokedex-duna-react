@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IPokeType } from "../services/Interfaces";
+import { ITextContent } from "../services/Interfaces";
 
 const StyledPokeType = styled.div`
   background-color: rgba(255, 255, 255, 0.25);
@@ -11,7 +11,7 @@ const StyledPokeType = styled.div`
   }
 `;
 
-export default function PokeType(prop: IPokeType) {
+export default function PokeType(prop: ITextContent) {
   return (
     <StyledPokeType>
       <h3>{prop.children}</h3>

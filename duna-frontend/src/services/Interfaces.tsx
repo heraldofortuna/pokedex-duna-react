@@ -1,12 +1,8 @@
-export interface IWrapper {
-  children: any;
+export interface IContent {
+  children: React.ReactElement;
 }
 
-export interface IContainer {
-  children: any;
-}
-
-export interface IButton {
+export interface ITextContent {
   children: string;
 }
 
@@ -17,18 +13,6 @@ export interface IPokeList {
   id: number;
   name: string;
   url: string;
-}
-
-export interface IPokeCard {
-  children: string;
-}
-
-export interface IPokemon {
-  backgroundColor: string;
-}
-
-export interface IPokeType {
-  children: any;
 }
 
 export interface IPokeInfo {

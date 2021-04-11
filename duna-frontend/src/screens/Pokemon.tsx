@@ -1,6 +1,5 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
-import { IPokemon } from "../services/Interfaces";
 import Wrapper from "../contents/Wrapper";
 import PokeInfo from "../components/PokeInfo";
 import { backgroundColorPokemon } from "../services/Functions";
@@ -32,7 +31,7 @@ export default function Pokemon() {
 
   React.useEffect(() => {
     axios
-      .get<IPokemon>(`https://pokeapi.co/api/v2/pokemon/${pokeName}`, {
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`, {
         headers: {
           "Content-Type": "application/json",
         },
