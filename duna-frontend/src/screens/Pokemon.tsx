@@ -1,10 +1,10 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
-import { Link } from "react-router-dom";
 import { IPokemon } from "../services/Interfaces";
 import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
 import Container from "../contents/Container";
+import PokeInfo from "../components/PokeInfo";
 import PokeType from "../components/PokeType";
 import Button from "../components/Button";
 import { backgroundColorPokemon } from "../services/Functions";
@@ -146,7 +146,9 @@ export default function Pokemon() {
 
   return (
     <Wrapper>
-      <StyledPokemon>
+      {console.log(pokemonHeight, typeof pokemonHeight)}
+      <PokeInfo height={pokemonHeight} />
+      {/* <StyledPokemon>
         <Container>
           <div className="pokemon__data--principal">
             <div>
@@ -263,7 +265,7 @@ export default function Pokemon() {
             </Link>
           </Container>
         </section>
-      </StyledPokemon>
+      </StyledPokemon> */}
     </Wrapper>
   );
 }
