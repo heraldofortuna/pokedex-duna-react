@@ -1,12 +1,8 @@
 import React from "react";
 import axios, { AxiosResponse } from "axios";
 import { IPokemon } from "../services/Interfaces";
-import styled from "styled-components";
 import Wrapper from "../contents/Wrapper";
-import Container from "../contents/Container";
 import PokeInfo from "../components/PokeInfo";
-import PokeType from "../components/PokeType";
-import Button from "../components/Button";
 import { backgroundColorPokemon } from "../services/Functions";
 
 export default function Pokemon() {
@@ -72,200 +68,27 @@ export default function Pokemon() {
       });
   }, [pokeName]);
 
-  const StyledPokemon = styled.div`
-    background-color: ${backgroundColorPokemon(pokemonType1)};
-
-    .pokemon__data--principal {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-
-      & > div {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        .pokemon__name {
-          color: var(--white);
-          font-size: 36px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 8px;
-
-          .pokemon__id {
-            color: var(--white);
-            font-size: 24px;
-          }
-        }
-
-        .pokemon__types {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 8px;
-        }
-      }
-
-      .pokemon__image {
-        width: 150px;
-        height: 150px;
-      }
-    }
-
-    .pokemon__data--stats {
-      background-color: var(--white);
-      width: 100%;
-      height: 100%;
-      border-radius: 20px 20px 0 0;
-      box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
-      -webkit-box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
-      -moz-box-shadow: 2px -9px 14px -5px rgba(69, 69, 69, 0.4);
-
-      .pokemon__stats {
-        tr {
-          width: 75%;
-        }
-
-        td {
-          width: 50%;
-
-          & > h4 {
-            color: var(--gray);
-          }
-        }
-      }
-    }
-
-    .pokemon__button--back {
-      text-align: center;
-    }
-  `;
-
   return (
     <Wrapper>
-      {console.log(pokemonHeight, typeof pokemonHeight)}
-      <PokeInfo height={pokemonHeight} />
-      {/* <StyledPokemon>
-        <Container>
-          <div className="pokemon__data--principal">
-            <div>
-              <h1 className="pokemon__name">
-                <p className="pokemon__id">#{pokemonId}</p>
-                {pokeName}
-              </h1>
-              <div className="pokemon__types">
-                <PokeType>{pokemonType1}</PokeType>
-                {pokemonType2 && <PokeType>{pokemonType2}</PokeType>}
-              </div>
-            </div>
-            <img className="pokemon__image" src={pokemonImage} alt={pokeName} />
-          </div>
-        </Container>
-        <section className="pokemon__data--stats">
-          <Container>
-            <h2>About</h2>
-            <table className="pokemon__stats">
-              <tbody>
-                <tr>
-                  <td>
-                    <h4>Height</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonHeight} cm</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Weight</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonWeight}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Abilities</h4>
-                  </td>
-                  <td>
-                    <div>
-                      <p>
-                        {pokemonAbility1}, {pokemonAbility2}
-                      </p>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <h2>Pokemon stats</h2>
-            <table className="pokemon__stats">
-              <tbody>
-                <tr>
-                  <td>
-                    <h4>Base experience</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonBaseExperience}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>HP:</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonHP}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Attack</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonAttack}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Defense</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonDefense}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Sp. Attack</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonSpecialAttack}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Sp. Defense</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonSpecialDefense}</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Speed</h4>
-                  </td>
-                  <td>
-                    <p>{pokemonSpeed}</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <Link to={"/"} className="pokemon__button--back">
-              <Button>Back to menu</Button>
-            </Link>
-          </Container>
-        </section>
-      </StyledPokemon> */}
+      <PokeInfo
+        id={pokemonId}
+        name={pokeName}
+        type1={pokemonType1}
+        type2={pokemonType2}
+        image={pokemonImage}
+        height={pokemonHeight}
+        weight={pokemonWeight}
+        ability1={pokemonAbility1}
+        ability2={pokemonAbility2}
+        base_experience={pokemonBaseExperience}
+        hp={pokemonHP}
+        attack={pokemonAttack}
+        defense={pokemonDefense}
+        sp_attack={pokemonSpecialAttack}
+        sp_defense={pokemonSpecialDefense}
+        speed={pokemonSpeed}
+        backgroundColor={backgroundColorPokemon(pokemonType1)}
+      />
     </Wrapper>
   );
 }

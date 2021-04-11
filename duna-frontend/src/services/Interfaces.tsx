@@ -48,4 +48,5 @@ export interface IPokeInfo {
   sp_attack: any;
   sp_defense: any;
   speed: any;
+  backgroundColor: any;
 }
