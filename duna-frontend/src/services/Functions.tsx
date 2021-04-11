@@ -53,6 +53,18 @@ export function ChooseColorAccordingType(type: any) {
       backgroundColor = "var(--light-blue)";
       break;
     }
+    case "flying": {
+      backgroundColor = "var(--cyan)";
+      break;
+    }
+    case "fairy": {
+      backgroundColor = "var(--light-pink)";
+      break;
+    }
+    case "dragon": {
+      backgroundColor = "var(--orange)";
+      break;
+    }
     default: {
       break;
     }

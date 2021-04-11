@@ -13,11 +13,14 @@ const GlobalStyle = createGlobalStyle`
     --red: #D7782E;
     --light-red: #FB6C6C;
     --pink: #F5A5C2;
+    --light-pink: #F2C9F0;
     --yellow: #DBD759;
     --light-yellow: #FFD86F;
     --purple: #7F668C;
     --light-purple: #9E74C3;
     --brown: #9B7B61;
+    --cyan: #65E4CD;
+    --orange: #F77D11;
   }
 
   * {
