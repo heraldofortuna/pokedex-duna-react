@@ -1,7 +1,7 @@
 # Pokedex - React
 
-![Project Image 1](duna-frontend/src/assets/project-image-1)
-![Project Image 2](duna-frontend/src/assets/project-image-2)
+![Project Image 1](duna-frontend/src/assets/project-image-1.PNG)
+![Project Image 2](duna-frontend/src/assets/project-image-2.PNG)
 
 > Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "stats" de cada personaje.
 
