@@ -9,7 +9,7 @@
 ### Tabla de Contenidos
 
 - [Descripción](#descripción)
-- [¿Cómo usarlo?](#¿cómo-usarlo?)
+- [¿Cómo usarlo?](#¿-cómo-usarlo-?)
 - [Referencias](#referencias)
 - [Licencia](#licencia)
 - [Sobre el autor](#sobre-el-autor)
@@ -76,7 +76,7 @@ https://dribbble.com/shots/6540871-Pokedex-App
 
 MIT License
 
-Copyright (c) [2017] [James Q Quick]
+Copyright (c) [2021] [Heraldo Fortuna]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
