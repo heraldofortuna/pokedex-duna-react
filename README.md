@@ -3,7 +3,7 @@
 ![Project Image 1](duna-frontend/src/assets/project-image-1.PNG)
 ![Project Image 2](duna-frontend/src/assets/project-image-2.PNG)
 
-> Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "stats" de cada personaje.
+> Vistas del proyecto.
 
 ---
 
@@ -19,7 +19,7 @@
 
 ## Descripción
 
-Creating ReadMe's for your Github repository can be tedious. I hope this template can save you time and effort as well as provide you with some consistency across your projects.
+Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "stats" de cada personaje al hacer click en su respectiva tarjeta.
 
 #### Tecnologías
 
@@ -34,11 +34,11 @@ Creating ReadMe's for your Github repository can be tedious. I hope this templat
 
 ## ¿Cómo usarlo?
 
-#### Instalación
+#### Instalación:
 
 Ingresa y corre en tu consola la siguiente sentencia: 'yarn install'
 
-#### Corre el proyecto
+#### Corre el proyecto:
 
 Ingresa y corre en tu consola 'yarn start' para entrar al modo desarrollador.
 Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador por defecto.
@@ -46,7 +46,7 @@ Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en t
 #### Refencia de la API
 
 ```html
-<p>https://pokeapi.co/</p>
+https://pokeapi.co/
 ```
 
 [Back To The Top](#read-me-template)
@@ -54,6 +54,10 @@ Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en t
 ---
 
 ## Referencias
+
+```html
+https://dribbble.com/shots/6540871-Pokedex-App
+```
 
 [Back To The Top](#read-me-template)
 
