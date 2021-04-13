@@ -1,38 +1,95 @@
-<img src="https://getduna.com/svg/duna-logo.svg" width="300">
+# Pokedex - React
 
-# React Senior Challenge
+![Project Image](project-image-url)
 
-## 👩‍💻 Proyect Overview
+> Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "stats" de cada personaje.
 
-- Crear una SPA
-- Utilizar fetch o axios para consultar una api https://dragon-ball-api.herokuapp.com/documentation​ o ​https://pokeapi.co/
-- Listar todos los personajes de la api
-- Al hacer click sobre el personaje abrir una página nueva y mostrar toda la información del personaje
-- Utilizar Css, puede ser css, sass o styled component
+---
 
-Recuerda que no tenemos un timeline, reclutamos on a rolling basis. Recuerda de actualizar el form que recibiste en tu correo cuando termines la prueba.
-Al completar la prueba ténica, avísanos por acá (usa el mismo correo): https://airtable.com/shrfLtBYqMg3jY3dc
+### Tabla de Contenidos
 
-## 🎯 Puntos
+- [Descripción](#description)
+- [¿Cómo usarlo?](#how-to-use)
+- [Referencias](#references)
+- [Licencia](#license)
+- [Sobre el autor](#author-info)
 
-1. Utilizar Typescript
-2. Utilizar variables de entorno
-3. Buen código e Indentación del código
+---
 
-## 🎯 Bonificaciones
+## Descripción
 
-- Poder hacer SSR
-- Montar el proyecto en docker y docker-compose
-- Crear Test E2E se recomienda utilizar cypress
+Creating ReadMe's for your Github repository can be tedious. I hope this template can save you time and effort as well as provide you with some consistency across your projects.
 
-## 📃 Disclaimer
+#### Tecnologías
 
-Esto es un desafío técnico sin proposito comercial y D-Una de ninguna manera:
+- React
+- TypeScript
+- Ruby On Rails
+- PostgreSQL
 
-- Compartirá o usará tu código
-- Obligarte a realizar este desafío
-- Compensarte de cualquier forma por realizar este desafío
+[Back To The Top](#read-me-template)
 
-# Buena suerte 🚀
+---
 
-Esta prueba se puede completar fácilmente en un lapso de 6 a 8 horas
+## ¿Cómo usarlo?
+
+#### Instalación
+
+Ingresa y corre en tu consola la siguiente sentencia: 'yarn install'
+
+#### Corre el proyecto
+
+Ingresa y corre en tu consola 'yarn start' para entrar al modo desarrollador.
+Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador por defecto.
+
+#### Refencia de la API
+
+```html
+<p>https://pokeapi.co/</p>
+```
+
+[Back To The Top](#read-me-template)
+
+---
+
+## Referencias
+
+[Back To The Top](#read-me-template)
+
+---
+
+## Licencia
+
+MIT License
+
+Copyright (c) [2017] [James Q Quick]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[Back To The Top](#read-me-template)
+
+---
+
+## Sobre el autor
+
+- Twitter - [@heraldofortuna](https://twitter.com/heraldofortuna)
+- GitHub - [heraldofortuna](https://github.com/heraldofortuna)
+- Linkedin - [heraldofortuna](https://www.linkedin.com/in/heraldo-fortuna/)
+
+[Back To The Top](#read-me-template)
