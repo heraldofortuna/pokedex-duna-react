@@ -1,7 +1,6 @@
 # Pokedex - React
 
-![Project Image 1](duna-frontend/src/assets/project-image-1.PNG)
-![Project Image 2](duna-frontend/src/assets/project-image-2.PNG)
+![Project Image](duna-frontend/src/assets/project-image.PNG)
 
 > Vistas del proyecto.
 
@@ -36,11 +35,21 @@ Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "s
 
 #### Instalación:
 
-Ingresa y corre en tu consola la siguiente sentencia: 'yarn install'
+Ingresa y corre en tu consola la siguiente sentencia
+
+```html
+yarn install
+```
 
 #### Corre el proyecto:
 
-Ingresa y corre en tu consola 'yarn start' para entrar al modo desarrollador.
+Ingresa y corre en tu consola
+
+```html
+yarn start
+```
+
+para entrar al modo desarrollador.
 Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador por defecto.
 
 #### Refencia de la API
