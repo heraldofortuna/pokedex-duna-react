@@ -1,4 +1,4 @@
-# Pokedex - React
+# Pokedex React
 
 ![Project Image](duna-frontend/src/assets/project-image.PNG)
 
@@ -8,11 +8,11 @@
 
 ### Tabla de Contenidos
 
-- [Descripción](#description)
-- [¿Cómo usarlo?](#how-to-use)
-- [Referencias](#references)
-- [Licencia](#license)
-- [Sobre el autor](#author-info)
+- [Descripción](#descripción)
+- [¿Cómo usarlo?](#¿cómo-usarlo?)
+- [Referencias](#referencias)
+- [Licencia](#licencia)
+- [Sobre el autor](#sobre-el-autor)
 
 ---
 
@@ -27,7 +27,7 @@ Una pequeña enciclopedia "Pokemon" donde encontrarás las características y "s
 - Ruby On Rails
 - PostgreSQL
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#pokedex-react)
 
 ---
 
@@ -58,7 +58,7 @@ Por último, abre [http://localhost:3000](http://localhost:3000) para verlo en t
 https://pokeapi.co/
 ```
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#pokedex-react)
 
 ---
 
@@ -68,7 +68,7 @@ https://pokeapi.co/
 https://dribbble.com/shots/6540871-Pokedex-App
 ```
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#pokedex-react)
 
 ---
 
@@ -96,7 +96,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#pokedex-react)
 
 ---
 
@@ -106,4 +106,4 @@ SOFTWARE.
 - GitHub - [heraldofortuna](https://github.com/heraldofortuna)
 - Linkedin - [heraldofortuna](https://www.linkedin.com/in/heraldo-fortuna/)
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#pokedex-react)
