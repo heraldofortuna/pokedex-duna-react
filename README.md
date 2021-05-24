@@ -53,7 +53,7 @@ to enter developer mode.
 
 Finally, open [http://localhost:3000](http://localhost:3000) to see it in your default browser.
 
-### API references
+### API References
 
 ```html
 https://pokeapi.co/
