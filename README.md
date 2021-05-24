@@ -9,7 +9,7 @@
 ### Table of Contents
 
 - [Description](#description)
-- [How to use?](#-how-to-use-?)
+- [How to use?](#how-to-use-?)
 - [References](#references)
 - [License](#license)
 - [Author](#author)
@@ -20,7 +20,7 @@
 
 A small "Pokemon" encyclopedia where you will find the characteristics and "stats" of each character by clicking on their respective card.
 
-#### Technologies
+### Technologies
 
 - React
 - TypeScript
@@ -33,7 +33,7 @@ A small "Pokemon" encyclopedia where you will find the characteristics and "stat
 
 ## How to use?
 
-#### Installation:
+### Installation:
 
 Enter and run the following sentence in your console:
 
@@ -41,7 +41,7 @@ Enter and run the following sentence in your console:
 yarn install
 ```
 
-#### Run the project:
+### Run the project:
 
 Enter and run the following sentence in your console:
 
@@ -53,7 +53,7 @@ to enter developer mode.
 
 Finally, open [http://localhost:3000](http://localhost:3000) to see it in your default browser.
 
-#### API references
+### API references
 
 ```html
 https://pokeapi.co/
