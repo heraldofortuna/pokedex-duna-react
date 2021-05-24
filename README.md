@@ -9,7 +9,7 @@
 ### Table of Contents
 
 - [Description](#description)
-- [How to use?](#how-to-use-?)
+- [How to use?](#how-to-use?)
 - [References](#references)
 - [License](#license)
 - [Author](#author)
